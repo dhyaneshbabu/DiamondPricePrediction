@@ -1,0 +1,59 @@
+---
+title: "Diamond Price Prediction"
+author: "dhyanesh babu"
+date: "April 16, 2018"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+This presentation contains documentation for the Diamond price prediction application.It can be found in the link [**here**] (https://dhyaneshbabu.shinyapps.io/DiamondPrice/)
+
+This application is building linear regression model using `diamonds` data set and is predicting the price of a diamond based on the selected diamond characteristics .The application allows the user to select:
+
+- Carat
+- Cut
+- Color
+
+It  plot a linear regression line and predictes price of the diamond.
+
+## Application dataset
+
+The data used for this application is `diamonds` data set(in `ggplot2` package).
+```{r echo=FALSE}
+library(ggplot2)
+```
+
+```{r echo=FALSE}
+summary(diamonds)
+
+```
+## Files and Github Repo
+
+This application is build using the shiny package.
+
+There are two files used to create the app.
+
+- Server.R
+- ui.R
+
+Files are available in the github repo
+https://github.com/dhyaneshbabu/DiamondPricePrediction
+
+Application is availble in the link
+https://dhyaneshbabu.shinyapps.io/DiamondPrice/
+
+## Functionality 
+
+Application plots the scatter plot with carat in the x axis and price in the y axis.
+Regression line is draw on above.
+
+when we select the  features of the diamond (carat, cut, color) , the dataset is filtered, and linear regression is  recalculated. 
+
+The predicted price of the diamond is displayed on the screen.
